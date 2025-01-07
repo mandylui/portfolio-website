@@ -1,0 +1,16 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* push footer down */
+  }
+
+  footer {
+    background-color: #F3E1E1;
+    width: 100%;
+    height: 70px;
+    border-top: 8px solid rgba(235, 199, 196, 0.20);
+}
+
