@@ -1,59 +1,75 @@
-.pages-title {/* for pages: Projects, Contact, and About*/
+/* /styles/projects.css*/
+main {
+    flex-grow: 1; /* Allow main content to take up remaining space */
+    display: flex;
+    flex-direction: column;
+}
+
+.pages-title {
     color: #5C4033;
     font-family: "Pixelify Sans";
     font-size: 55px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-
     display: flex;
     justify-content: center;
     margin-top: -50px;
-  }
+}
 
-
-  .project {
+.project {
     margin-left: 50px;
-  }
+}
 
-  .project-title {
+.project-title {
     color: #5C4033;
     font-family: "Pixelify Sans";
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-
     margin-left: 50px;
     margin-bottom: -20px;
-  }
+}
 
-  .division-line {
+.division-line {
     color: #5C4033;
     font-family: Kameron;
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-
     margin-left: 50px;
-  }
+}
 
-  .project-description {
+.project-description {
     color: #5C4033;
     font-family: Kameron;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-
-    margin-left: 50px;
-    width: 1274px;
-    padding-bottom: 100px;
-  }
-
-  .images {
-    display: flex;
-    justify-content: center;    
     padding-bottom: 30px;
-  }
+    margin-bottom: 0;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-shrink: 0; /* Prevent the ImageGallery from shrinking */
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Let it grow to fill available space */
+    min-height: calc(100vh - 70px); /* Stretch to full height minus footer height */
+}
+
+.image-gallery {
+    width: 100%; /* Ensure ImageGallery doesn’t overflow horizontally */
+    max-width: 1200px; /* Optionally set a max width */
+    margin: 0 auto; /* Center the gallery */
+    overflow: hidden; /* Prevent the gallery from affecting layout */
+}

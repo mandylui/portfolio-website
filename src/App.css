@@ -1,9 +1,7 @@
 /* src/styles/App.css */
 main {
   height: 100vh;
-
-  min-height: calc(100vh - 70px); /* Ensure minimum height taking footer into account */
-    padding-bottom: 70px; /* Space for the footer */
+  
 }
 
 .title {

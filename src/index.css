@@ -1,3 +1,16 @@
 :root {
   background-color: #F7F2EC;
+  height: 100%; /* Full viewport height */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure body stretches full height */
+  display: flex;
+  flex-direction: column;
 }
