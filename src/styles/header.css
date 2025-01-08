@@ -5,7 +5,7 @@ html, body {
     padding: 0;
     height: 100%; 
     width: 100%;  
-    overflow-x: hidden; /* prevents horizontal scroll */
+    overflow-x: hidden; /* prevent horizontal scroll */
 }
 
 header {
@@ -30,6 +30,7 @@ header {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    text-decoration: none;
 
     padding-right: 40px;
     padding-left: 20px;

@@ -10,26 +10,23 @@ function Projects() {
         <div className="projects-container">
           <main>
             <h1 className="pages-title">Projects</h1>
-            <div className="subheading">Click on a project to learn more</div>
+            <div className="title-subheading">Click on a project to learn more</div>
     
             {/* Glimpse Project */}
+            
             <div className="project">
-              <div className="project-title">Glimpse</div>
-              <Link to="/glimpse">Glimpse info</Link>
-              <div className="division-line">-------------------</div>
-              <div className="project-description">
-                Glimpse is a personal project born out of my passion for combining creativity with functionality.<br />
-                It’s an intuitive album-making web application designed to help users capture and customize their memories effortlessly.<br />
-                The platform allows users to organize photos, add decorative elements like stickers and frames, and personalize layouts with ease.
-              </div>
+            <div className="divider"></div>
+
+              <Link className="project-title" to="/glimpse">Glimpse</Link>
+              <div className="project-subheading">Dynamic album-editing application combining aspects of creative freedom and traditional drag and drop album-editing services</div>
             </div>
     
             {/* Stay Positive Project */}
             <div className="project">
+              <div className="divider"></div>
               <div className="project-title">Stay Positive</div>
-              <div className="division-line">----------------------------</div>
-              <div className="project-description">
-                Stay Positive is a motivational platform designed to spread optimism and positivity.
+              <div className="project-subheading">
+                A mindfulness and meditation platform designed to spread optimism and positivity.
               </div>
               <div className="images">
 
@@ -38,10 +35,10 @@ function Projects() {
     
             {/* Portfolio Website */}
             <div className="project">
+            <div className="divider"></div>
               <div className="project-title">Portfolio Website</div>
-              <div className="division-line">-----------------------------------</div>
-              <div className="project-description">
-                This portfolio website showcases my work and achievements as a front-end developer.
+              <div className="project-subheading">
+                This website which showcases my work and achievements as a front-end developer.
               </div>
             </div>
           </main>

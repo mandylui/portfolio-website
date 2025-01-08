@@ -1,0 +1,11 @@
+/* /styles/glimpse.css*/
+
+.image-container { /* global for staypositive and all other project pages*/
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+  }
+  
+  .image-gallery {
+    max-width: 60%;        
+  }

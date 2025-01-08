@@ -1,6 +1,6 @@
 /* /styles/projects.css*/
 main {
-    flex-grow: 1; /* Allow main content to take up remaining space */
+    flex-grow: 1; 
     display: flex;
     flex-direction: column;
 }
@@ -12,13 +12,31 @@ main {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+
     display: flex;
     justify-content: center;
     margin-top: -50px;
 }
 
+.title-subheading {
+    color: #5C4033;
+    font-family: "Kameron";
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 100;
+    line-height: normal;
+
+    display: flex;
+    justify-content: center;
+    margin-top: -40px;
+    padding-bottom: 75px;
+}
+
 .project {
+    display: flex; /* horizontal row */
+    justify-content: center;
     margin-left: 50px;
+    padding-bottom: 100px;
 }
 
 .project-title {
@@ -28,41 +46,42 @@ main {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    margin-left: 50px;
+    text-decoration: none;
+
+    display: flex;
+    margin-right: auto;
+    margin-left: 150px;
     margin-bottom: -20px;
+    padding-right: 100px;
+
 }
 
-.division-line {
-    color: #5C4033;
-    font-family: Kameron;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-left: 50px;
+.divider {
+    width: 1px;
+    height: 75px;
+    border-right: 8px solid rgba(235, 199, 196, 1.0);
+
+    position: relative;
+    left: 500px;
 }
 
-.project-description {
+.project-subheading {
     color: #5C4033;
-    font-family: Kameron;
+    font-family: "Kameron";
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
+
     line-height: normal;
     padding-bottom: 30px;
+    margin-right: 100px;
     margin-bottom: 0;
+    max-width: 700px;
 }
 
 .projects-container {
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Let it grow to fill available space */
-    min-height: calc(100vh - 70px); /* Stretch to full height minus footer height */
-}
-
-.image-gallery {
-    width: 100%; /* Ensure ImageGallery doesn’t overflow horizontally */
-    max-width: 1200px; /* Optionally set a max width */
-    margin: 0 auto; /* Center the gallery */
-    overflow: hidden; /* Prevent the gallery from affecting layout */
+    flex-grow: 1; 
+    min-height: calc(100vh - 70px); 
 }
