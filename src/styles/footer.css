@@ -18,8 +18,6 @@ footer {
     height: 70px; /* Fixed footer height */
     border-top: 8px solid rgba(235, 199, 196, 0.20);
     display: flex; /* Center content inside footer */
-    align-items: center; /* Vertically center content */
-    justify-content: center; /* Horizontally center content */
     flex-shrink: 0; /* Ensure footer does not shrink */
     position: relative; /* Footer remains at the bottom naturally */
 }

@@ -1,26 +1,26 @@
 // src/pages/Projects.jsx
 import React from 'react';
 import '../styles/projects.css';
-import Gallery from "react-grid-gallery";
+import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Glimpse from "./Glimpse";
 
 function Projects() {
-
-
       return (
         <div className="projects-container">
           <main>
             <h1 className="pages-title">Projects</h1>
+            <div className="subheading">Click on a project to learn more</div>
     
             {/* Glimpse Project */}
             <div className="project">
               <div className="project-title">Glimpse</div>
+              <Link to="/glimpse">Glimpse info</Link>
               <div className="division-line">-------------------</div>
               <div className="project-description">
                 Glimpse is a personal project born out of my passion for combining creativity with functionality.<br />
                 It’s an intuitive album-making web application designed to help users capture and customize their memories effortlessly.<br />
                 The platform allows users to organize photos, add decorative elements like stickers and frames, and personalize layouts with ease.
-              </div>
-              <div className="images">
               </div>
             </div>
     
