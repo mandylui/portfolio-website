@@ -1,11 +1,56 @@
 /* /styles/glimpse.css*/
 
-.image-container { /* global for staypositive and all other project pages*/
+.project-description { /* global for staypositive and all other project pages*/
+    color: #5C4033;
+    font-family: "Kameron";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
     display: flex;
     justify-content: center; 
     align-items: center;    
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.image-container {
+    flex: 1; /* Ensures it grows with the content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 500px; /* Enforce a minimum height to stabilize layout */
+    overflow: hidden; /* Prevent any scroll within the container */
+}
+
+.image-gallery {
+    max-width: 60%;
+    height: auto; /* Allow content to size naturally */
+}
+
+  .description-bottom { 
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
-  
-  .image-gallery {
-    max-width: 60%;        
+
+  .project-description-divider {
+    width: 1px;
+    height: 300px;
+    border-right: 8px solid rgba(235, 199, 196, 1.0);
+
+    position: relative;
+
   }
+
+  .projects-footer {
+    margin-top: 300px; /* forcibly pushing footer down in this bc it doesnt fo down*/
+    background-color: #F3E1E1;
+    height: 70px; 
+    border-top: 8px solid rgba(235, 199, 196, 0.20);
+    flex-shrink: 0; 
+}

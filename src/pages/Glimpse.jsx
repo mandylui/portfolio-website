@@ -23,20 +23,34 @@ function Glimpse () {
         <main>
             <div className="pages-title">Glimpse</div>
             <div className="project-description">
-                Glimpse is a personal project born out of my passion for combining creativity with functionality.<br />
-                It’s an intuitive album-making web application designed to help users capture and customize their memories effortlessly.<br />
+                Glimpse is a personal project born out of my passion for combining creativity with functionality.
+                It’s an intuitive album-making web application designed to help users capture and customize their memories effortlessly.
                 The platform allows users to organize photos, add decorative elements like stickers and frames, and personalize layouts with ease.
               </div>
 
-            <div className="image-container">
-                    <Carousel className="image-gallery" showThumbs={false} infiniteLoop={true} autoPlay={true} dynamicHeight={true}>
-                {glimpseImages.map((src, index) => (
-                    <div key={index}>
-                    <img src={src} alt={`Glimpse Slide ${index + 1}`} />
-                    </div>
-                ))}
-                </Carousel>
-            </div>          
+              <div className="image-container">
+                    <Carousel
+                        className="image-gallery"
+                        showThumbs={false}
+                        infiniteLoop={true}
+                        autoPlay={true}
+                        dynamicHeight={false} /* Critical fix: Prevent height recalculations */
+                    >
+                        {glimpseImages.map((src, index) => (
+                            <div key={index}>
+                                <img src={src} alt={`Glimpse Slide ${index + 1}`} />
+                            </div>
+                        ))}
+                    </Carousel>
+                </div>
+
+            <div className="description-bottom">
+                <div className="project-description">more information here</div> 
+                <div className="project-description-divider"></div>  
+                <div className="project-description">more information here</div>
+           </div>
+            
+            <footer className="projects-footer"></footer>
         </main>
     )
 }

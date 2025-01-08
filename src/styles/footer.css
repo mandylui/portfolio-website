@@ -1,5 +1,5 @@
 html, body {
-    height: 100%; /* Ensure the HTML and body take up full height */
+    height: 100%; /* Full viewport height */
     margin: 0;
     padding: 0;
     display: flex;
@@ -7,17 +7,15 @@ html, body {
 }
 
 main {
-    flex-grow: 1; /* Allow main content to take up remaining space */
     display: flex;
     flex-direction: column;
+    flex-grow: 1; /* Allows it to take up the available vertical space */
+    box-sizing: border-box;
 }
 
 footer {
     background-color: #F3E1E1;
-    width: 100%;
     height: 70px; /* Fixed footer height */
     border-top: 8px solid rgba(235, 199, 196, 0.20);
-    display: flex; /* Center content inside footer */
     flex-shrink: 0; /* Ensure footer does not shrink */
-    position: relative; /* Footer remains at the bottom naturally */
 }

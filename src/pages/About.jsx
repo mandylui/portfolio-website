@@ -3,11 +3,17 @@ import React from 'react';
 
 function About() {
   return (
-    <main>
-      <div>
-        <h1 className="pages-title">About Me</h1>
-      </div>
+
+    <div>
+      <main>
+        <div>
+          <h1 className="pages-title">About Me</h1>
+        </div>
     </main>
+
+    <footer className="footer"></footer>
+    </div>
+    
   );
 }
 

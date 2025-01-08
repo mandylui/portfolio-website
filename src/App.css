@@ -26,3 +26,10 @@ main {
   width: 761px;
   margin-left: 600px;
 }
+
+.footer {
+  background-color: #F3E1E1;
+  height: 70px; /* Fixed footer height */
+  border-top: 8px solid rgba(235, 199, 196, 0.20);
+  flex-shrink: 0; /* Ensure footer does not shrink */
+}
