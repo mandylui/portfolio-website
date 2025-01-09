@@ -7,23 +7,16 @@ import "../styles/staypositive.css";
 function Glimpse () {
 
     const staypositiveImages = [
-        "/assets/glimpse-create-account.png",
-        "/assets/glimpse-editing-progress.png",
-        "/assets/glimpse-editing.png",
-        "/assets/glimpse-home-editing.png",
-        "/assets/glimpse-home.png",
-        "/assets/glimpse-login.png",
-        "/assets/glimpse-name-album.png",
-        "/assets/glimpse-template.png",
-        "/assets/glimpse-upload-photo.png",
-        "/assets/glimpse-welcome.png",
+        "/assets/sp-figma-ios.png",
+        "/assets/sp-figma-website.png",
+        "/assets/sp-help-page.png",
       ];
 
     return (
         <main>
-            <div className="pages-title">Glimpse</div>
-            <div className="project-description">
-                description here
+            <div className="pages-title">Stay Positive</div>
+            <div className="project-description"> Mental health is ____
+                
               </div>
 
               <div className="image-container">
@@ -45,7 +38,7 @@ function Glimpse () {
             <div className="description-bottom">
                 <div className="project-description-bottom">more information here</div> 
                 <div className="project-description-divider"></div>  
-                <div className="project-description-bottom">more information here</div>
+                <div className="project-description-bottom">Click here to check out our GitHub!</div>
            </div>
             
             <footer className="projects-footer"></footer>
