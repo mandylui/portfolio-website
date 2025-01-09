@@ -8,13 +8,10 @@
     font-weight: 400;
     line-height: normal;
 
-    display: flex;
-    justify-content: center; 
-    align-items: center;    
     padding-top: 30px;
     padding-bottom: 30px;
-    padding-left: 50px;
-    padding-right: 50px;
+    max-width: 75%;
+    margin-left: 12.5%;
 }
 
 .image-container {
@@ -32,20 +29,32 @@
     height: auto; /* Allow content to size naturally */
 }
 
-  .description-bottom { 
+.description-bottom { 
     display: flex;
-    padding-top: 50px;
+    justify-content: center;
+    padding-top: 100px;
     padding-bottom: 50px;
-  }
+}
 
-  .project-description-divider {
+.project-description-divider {
     width: 1px;
     height: 300px;
     border-right: 8px solid rgba(235, 199, 196, 1.0);
 
     position: relative;
+}
 
-  }
+ .project-description-bottom {
+    color: #5C4033;
+    font-family: "Kameron";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    padding-left: 20px;
+    padding-right: 20px;
+ } 
 
   .projects-footer {
     margin-top: 300px; /* forcibly pushing footer down in this bc it doesnt fo down*/

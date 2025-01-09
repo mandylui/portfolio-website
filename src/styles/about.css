@@ -1,0 +1,44 @@
+.about-heading {
+    margin-left: 150px;
+}
+.about-name{
+    color: #5C4033;
+    font-family: "Pixelify Sans";
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    padding-bottom: 10px;
+}
+
+.job-title {
+    color: rgba(92, 64, 51, 0.50);
+    font-family: "Pixelify Sans";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.about-divider {
+    background-color: #5C4033; 
+
+    width: 100%; 
+    max-width: 618px;
+    height: 3px; 
+    flex-shrink: 0; 
+    margin-top: 10px;
+}
+
+.about-description {
+    color: rgba(92, 64, 51, 0.50);
+    font-family: "Kameron";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    margin-left: 150px;
+    padding: 20px;
+}

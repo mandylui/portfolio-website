@@ -1,12 +1,12 @@
-// src/pages/Glimpse.jsx
+// src/pages/StayPositive.jsx
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import "../styles/glimpse.css";
+import "../styles/staypositive.css";
 
 function Glimpse () {
 
-    const glimpseImages = [
+    const staypositiveImages = [
         "/assets/glimpse-create-account.png",
         "/assets/glimpse-editing-progress.png",
         "/assets/glimpse-editing.png",
@@ -23,9 +23,7 @@ function Glimpse () {
         <main>
             <div className="pages-title">Glimpse</div>
             <div className="project-description">
-                Glimpse is a personal project born out of my passion for combining creativity with functionality.
-                It’s an intuitive album-making web application designed to help users capture and customize their memories effortlessly.
-                The platform allows users to organize photos, add decorative elements like stickers and frames, and personalize layouts with ease.
+                description here
               </div>
 
               <div className="image-container">
@@ -34,11 +32,11 @@ function Glimpse () {
                         showThumbs={false}
                         infiniteLoop={true}
                         autoPlay={true}
-                        dynamicHeight={false} /* Critical fix: Prevent height recalculations */
+                        dynamicHeight={false} 
                     >
-                        {glimpseImages.map((src, index) => (
+                        {staypositiveImages.map((src, index) => (
                             <div key={index}>
-                                <img src={src} alt={`Glimpse Slide ${index + 1}`} />
+                                <img src={src} alt={`Stay Positive ${index + 1}`} />
                             </div>
                         ))}
                     </Carousel>

@@ -2,8 +2,6 @@
 import React from 'react';
 import '../styles/projects.css';
 import { Link } from "react-router-dom";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Glimpse from "./Glimpse";
 
 function Projects() {
       return (
@@ -16,7 +14,6 @@ function Projects() {
               
               <div className="project">
               <div className="divider"></div>
-
                 <Link className="project-title" to="/glimpse">Glimpse</Link>
                 <div className="project-subheading">Dynamic album-editing application combining aspects of creative freedom and traditional drag and drop album-editing services</div>
               </div>
@@ -24,10 +21,8 @@ function Projects() {
               {/* Stay Positive Project */}
               <div className="project">
                 <div className="divider"></div>
-                <div className="project-title">Stay Positive</div>
-                <div className="project-subheading">
-                  A mindfulness and meditation platform designed to spread optimism and positivity.
-                </div>
+                <Link className="project-title" to="/staypositive">Stay Positive</Link>
+                <div className="project-subheading">A mindfulness and meditation platform designed to spread optimism and positivity.</div>
                 <div className="images">
 
                 </div>

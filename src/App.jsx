@@ -8,6 +8,8 @@ import Projects from './pages/Projects';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Glimpse from './pages/Glimpse';
+import StayPositive from './pages/StayPositive';
+
 
 function App() {
   return (
@@ -32,6 +34,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/glimpse" element={<Glimpse />} />
+        <Route path="/staypositive" element={<StayPositive />} />
       </Routes>
     </Router>
   );
