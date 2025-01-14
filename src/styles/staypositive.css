@@ -1,0 +1,9 @@
+/* /styles/staypositive.css*/
+
+.sp-project-description-divider {
+    width: 1px;
+    height: 520px;
+    border-right: 8px solid rgba(235, 199, 196, 1.0);
+
+    position: relative;
+}

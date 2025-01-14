@@ -62,18 +62,37 @@ function Glimpse () {
                     <strong>The Process:</strong>
                     <br></br>
                     1. UX Design
-                    <br></br><br></br><br></br><br></br><br></br>2. Code<br></br> 3.Test
-                    
+                    <br></br><br></br><br></br><br></br><br></br><br></br>2. Code
                 </div> 
+
                 <div className="project-description-divider"></div>  
+                
                 <div className="project-description-bottom">
                     <br></br>
-                    <strong>Prototyping</strong> <br></br>
+                    <strong className="glimpse-subtitle-bottom">Prototyping</strong> <br></br>
                     - Prototyping was honestly the longest process of creating Glimpse. With my research in finding which editing features should be included and how to make it as intutive as possible, on top of
                       creating the design of the website layout through Figma was both time-consuming and rewarding. While it did take a long time, I beleive it's imperative in order to create an application that 
                       maximizes its ability to be functional, visually appealing, and easy to navigate.
                     <br></br><br></br>
-                    View my Figma file here: https://www.figma.com/design/agKrdohr555Rzduuwi3toG/glimpse?node-id=46-410&t=vxkDoyjUAJUflU9H-1
+                    View my Figma file here: <a className="projects-links" href="https://www.figma.com/design/agKrdohr555Rzduuwi3toG/glimpse?node-id=46-410&t=vxkDoyjUAJUflU9H-1" target="_blank" rel="noopener noreferrer">Glimpse Figma</a> 
+                
+                    <br></br><br></br><strong className="glimpse-subtitle-bottom">Key Implementations and Features</strong><br></br> 
+                    - <strong className="glimpse-code-bottom-title">Dynamic Page Navigation</strong><br></br>
+                    The 'Next' and 'Previous' buttons ensures that all edits made on an album page (canvas) are saved and accessible across all sessions.
+                    Additionally, adding blank pages or revisiting edited pages is effortless and intuitive.<br></br><br></br>
+
+                    - <strong className="glimpse-code-bottom-title">Canvas Editing w/ Fabric.js</strong><br></br>
+                    Each album page includes an interactive canvas, which allows users to draw over images in any color, add stickers, photos, and add photo frames and templates.
+                    Undo and redo functionalities are also implemented to make mistakes easier to deal with.<br></br><br></br>
+
+                    - <strong className="glimpse-code-bottom-title">Customizable Static Assets</strong><br></br>
+                    Ready-to-use design elements such as a hand-picked selection of stickers, custom frames and album templates are available to use in the album's naviagtion bar.<br></br><br></br>
+                    
+                    - <strong className="glimpse-code-bottom-title">Optimized Data Handling</strong><br></br>
+                    Saved albums, edits, and templates are all efficiently managed to ensure all user data is preserved and retrievable after navigating away/ returning back to the application.<br></br><br></br>
+
+                    - <strong className="glimpse-code-bottom-title">Clean and Intuitive Design</strong><br></br>
+                    I made it a point for Glimpse to incorporate a minimalist design, while focusing on the usability and aesthetic appeal of the app to create the best, most intuitive experience.<br></br>
                 </div>
            </div>
             
