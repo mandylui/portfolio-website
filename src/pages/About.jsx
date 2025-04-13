@@ -2,7 +2,6 @@
 import React from 'react';
 import "../styles/about.css";
 
-
 function About() {
   return (
 
@@ -22,7 +21,10 @@ function About() {
           I’ve worked on projects like Glimpse (a customizable album-making website), and Stay Positive (a mental health platform integrating affirmations, meditation, and journaling), which have allowed me to
           solve real-world problems through research and thoughtful design & development processes.
           <br></br><br></br>
-          Outside of coding, I enjoy spending time with family and friends, hiking, doing crafts, and playing guitar!
+          I've also done a number or various independent projects to help shape the develop I am today!
+          <br></br> This includes apps like Molez--a iOS based Whack-a-Mole game, bry-- a to do/checklist productivity website, and more. Please refer to the "Projects" page to learn more.
+          <br></br><br></br>
+          Outside of coding, I enjoy spending time with family and friends, hiking, playing pickleball, doing crafts/puzzles, and playing the guitar!
           <br></br><br></br>
           Feel free to reach out through any of my contacts provided on this website :)
         </div>

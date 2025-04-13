@@ -1,7 +1,19 @@
 /* src/styles/App.css */
-main {
+body {
   height: 100vh;
   
+}
+
+.home-main-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.profile-img {
+  width: 500px;
+  height: auto;
+  margin-left: 20px;
 }
 
 .title {
@@ -11,9 +23,7 @@ main {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-
-  margin-top: 250px;
-  margin-left: 600px;
+  margin-top: 125px;
 }
 
 .description {
@@ -24,7 +34,6 @@ main {
   line-height: normal;
 
   width: 761px;
-  margin-left: 600px;
 }
 
 .footer {
@@ -32,4 +41,5 @@ main {
   height: 70px; /* Fixed footer height */
   border-top: 8px solid rgba(235, 199, 196, 0.20);
   flex-shrink: 0; /* Ensure footer does not shrink */
+  margin-top: 50px;
 }

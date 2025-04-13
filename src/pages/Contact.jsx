@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/contact.css';
+import "../styles/glimpse.css"; 
 
 function Contact () {
     return (
@@ -31,8 +32,8 @@ function Contact () {
                 
 
             </main>
-        
-            <footer className="footer"></footer>
+
+            <footer className="contact-footer"></footer>
         </div>
     )
 }

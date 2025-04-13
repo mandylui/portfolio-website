@@ -19,9 +19,15 @@ function App() {
         <Route path="/" element={
           <div>
             <main>
-              <div className="title">Mandy Lui</div>
-              <div className="description">
-                Hello, my name is Mandy! I’m a front-end developer based <br></br>in San Diego and currently attending the University of Rochester pursuing a Bachelor’s degree in computer science and a minor in business.
+              <div className="home-main-container">
+                <div><img className="profile-img" src="/assets/profile-img.png" alt="profile-picture" /></div>
+                
+                <div className="home-sub-container">
+                  <div className="title">Mandy Lui</div>
+                  <div className="description">
+                    Hello, my name is Mandy! I’m a front-end developer based <br></br>in San Diego and currently attending the University of Rochester pursuing a Bachelor’s degree in computer science and a minor in business.
+                  </div>
+                </div>
               </div>
               
             </main>
