@@ -36,6 +36,19 @@ function App() {
                 </Link>
               </div>
             </div>
+
+            <div className="botanical-art">
+              <span className="botanical-blob botanical-blob--blush" aria-hidden="true" />
+              <span className="botanical-blob botanical-blob--sage" aria-hidden="true" />
+              <span className="botanical-dot botanical-dot--one" aria-hidden="true" />
+              <span className="botanical-dot botanical-dot--two" aria-hidden="true" />
+
+              <img
+                className="home-profile-img"
+                src="/assets/profile-img.png"
+                alt="Mandy Lui"
+              />
+            </div>
           </main>
         } />
         <Route path="/projects" element={<Projects />} />

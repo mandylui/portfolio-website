@@ -10,11 +10,10 @@ html, body {
 
 header {
     background-color: #F3E1E1;
-    height: 80px;
+    height: 50px;
     flex-shrink: 0;
-    margin-bottom: 100px;
-
     border-bottom: 8px solid rgba(235, 199, 196, 0.20);
+    margin-bottom: 100px;
 }
 
 .header-names {
@@ -23,15 +22,39 @@ header {
 }
 
 .names {
+    position: relative;
     color: #5C4033;
-    font-family: "Pixelify Sans";
-    font-size: 25px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 17px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     text-decoration: none;
-
     padding-right: 40px;
     padding-left: 20px;
-    padding-top: 25px;
+    padding-top: 15px;
+    transition: color 200ms ease;
+}
+
+.names::after {
+    content: "";
+    position: absolute;
+    right: 40px;
+    bottom: -0px;
+    left: 20px;
+    height: 1.5px;
+    background-color: #3D2921;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 250ms ease;
+}
+
+.names:hover,
+.names:focus-visible {
+    color: #3D2921;
+}
+
+.names:hover::after,
+.names:focus-visible::after {
+    transform: scaleX(1);
 }

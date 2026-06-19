@@ -1,12 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300&display=swap');
 
 .home-main-container {
+  position: relative;
   box-sizing: border-box;
-  min-height: calc(100vh - 288px);
-padding-left: 120px;}
+  min-height: calc(100vh - 158px);
+  margin-top: 130px;
+  padding-left: 120px;
+  overflow: visible;
+}
+
+
 
 .home-sub-container {
-  width: 100%;
+  position: relative;
+  z-index: 2;
+  width: min(58%, 850px);
+  padding-top: 20px;
+  padding-left: 10px;
 }
 
 .home-eyebrow {
@@ -16,6 +26,7 @@ padding-left: 120px;}
   font-weight: 500;
   letter-spacing: 0.3em;
   text-transform: uppercase;
+  margin-top: 0;
   margin-left: 10px;
 }
 
@@ -40,8 +51,6 @@ padding-left: 120px;}
 .title em {
   font-weight: 300;
 }
-
-
 
 .home-actions {
   display: flex;
@@ -72,16 +81,152 @@ padding-left: 120px;}
   color: #9b8b7f;
 }
 
+.botanical-art {
+  position: absolute;
+  z-index: 1;
+  top: -85px;
+  right: clamp(70px, 7vw, 135px);
+  width: clamp(390px, 38vw, 610px);
+  aspect-ratio: 0.9;
+  pointer-events: none;
+}
+
+.home-profile-img {
+  position: absolute;
+  z-index: 2;
+  top: 7%;
+  left: calc(9% - 100px);
+  width: 82%;
+  height: auto;
+  filter: drop-shadow(0 22px 26px rgba(98, 68, 53, 0.14));
+  animation: profile-float 7s ease-in-out infinite;
+}
+
+.botanical-blob,
+.botanical-dot {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+}
+
+.botanical-blob--blush {
+  top: 14%;
+  right: 0;
+  width: 72%;
+  aspect-ratio: 1;
+  background: rgba(240, 200, 196, 0.72);
+  animation: blob-drift 9s ease-in-out infinite;
+}
+
+.botanical-blob--sage {
+  right: 41%;
+  bottom: 1%;
+  width: 38%;
+  aspect-ratio: 1;
+  background: rgba(194, 207, 190, 0.62);
+  animation: blob-drift 8s ease-in-out -3s infinite reverse;
+}
+
+.botanical-dot--one {
+  top: 8%;
+  left: calc(13% - 150px);
+  width: 34px;
+  height: 34px;
+  background: #dba7a0;
+  animation: dot-float 6s ease-in-out infinite;
+}
+
+.botanical-dot--two {
+  top: 25%;
+  left: calc(2% - 150px);
+  width: 17px;
+  height: 17px;
+  background: #879c87;
+  animation: dot-float 5s ease-in-out -2s infinite reverse;
+}
+
 .projects-button:hover,
 .about-link:hover {
   opacity: 0.78;
   transform: translateY(-1px);
 }
 
+@keyframes profile-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes blob-drift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(-10px, 14px) scale(1.035);
+  }
+}
+
+@keyframes dot-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-18px);
+  }
+}
+
+@media (max-width: 1050px) {
+  .home-main-container {
+    padding-left: 70px;
+  }
+
+  .home-sub-container {
+    width: 62%;
+  }
+
+  .botanical-art {
+    right: -20px;
+    width: clamp(360px, 43vw, 480px);
+    opacity: 0.86;
+  }
+
+}
+
 @media (max-width: 700px) {
   .home-main-container {
-    min-height: calc(100vh - 288px);
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 158px);
     padding: 90px 24px 60px;
+    overflow: hidden;
+  }
+
+  .home-main-container::after {
+    top: -170px;
+    right: -190px;
+    width: 420px;
+  }
+
+  .home-sub-container {
+    width: 100%;
+  }
+
+  .botanical-art {
+    position: relative;
+    top: auto;
+    right: auto;
+    align-self: center;
+    width: min(100%, 390px);
+    margin-top: 75px;
   }
 
   .home-eyebrow {
@@ -105,5 +250,14 @@ padding-left: 120px;}
 
   .projects-button {
     padding: 13px 25px 14px;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-profile-img,
+  .botanical-blob,
+  .botanical-dot {
+    animation: none;
   }
 }
