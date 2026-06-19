@@ -19,20 +19,19 @@ function App() {
         <Route path="/" element={
           <div>
             <main>
-              <div className="home-main-container">
-                <div><img className="profile-img" src="/assets/profile-img.png" alt="profile-picture" /></div>
-                
+              <div className="home-main-container">                
                 <div className="home-sub-container">
-                  <div className="title">Mandy Lui</div>
-                  <div className="description">
-                    Hello, my name is Mandy! I’m a front-end developer based <br></br>in San Diego and currently attending the University of Rochester pursuing a Bachelor’s degree in computer science and a minor in business.
+                  <div className="title">Mandy <i><br></br>Lui</i></div>
+                  <div className="home-divider">
+                    <b>___________________</b>
                   </div>
-                </div>
+                  <div className="description">
+                    Hello, my name is Mandy! I’m a front-end developer based <br></br>in San Diego.
+                  </div>
+                  </div>
               </div>
-              
             </main>
             
-            <footer className="footer"></footer>
           </div>
           
         } />

@@ -1,4 +1,5 @@
 /* src/styles/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&display=swap');
 body {
   height: 100vh;
   
@@ -18,17 +19,23 @@ body {
 
 .title {
   color: #5C4033;
-  font-family: "Pixelify Sans";
-  font-size: 55px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  margin-top: 125px;
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(4rem, 10vw, 7rem);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  margin-top: 100px;
+  margin-right: 55px;
+}
+
+.home-divider {
+  color:#f3e1e1;
+  font-size: 30px;
 }
 
 .description {
   color: #5C4033;
-  font-family: Kameron;
+  font-family: 'DM Sans', sans-serif;
   font-size: 25px;
   font-style: normal;
   line-height: normal;

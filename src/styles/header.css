@@ -10,7 +10,6 @@ html, body {
 
 header {
     background-color: #F3E1E1;
-    width: 1440px;
     height: 80px;
     flex-shrink: 0;
     margin-bottom: 100px;
