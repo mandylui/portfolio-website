@@ -22,7 +22,7 @@
 
 .projects-page .pages-title {
   margin: 0;
-  font-size: clamp(6.5rem, 10vw, 12rem);
+  font-size: clamp(5rem, 7vw, 12rem);
   font-weight: 300;
   letter-spacing: -0.065em;
   line-height: 0.9;
@@ -36,11 +36,60 @@
   background: #d4cbc1;
 }
 
+.project-sort {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.project-sort-label {
+  color: #9b8b7f;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.project-sort-options {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid #d5c9c0;
+  border-radius: 999px;
+  background: rgba(247, 242, 236, 0.7);
+}
+
+.project-sort-button {
+  padding: 9px 17px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #8e7e73;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.project-sort-button:hover,
+.project-sort-button:focus-visible {
+  color: #624435;
+  outline: none;
+}
+
+.project-sort-button.is-active {
+  background: #624435;
+  color: #fffaf5;
+}
+
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(22px, 2.4vw, 48px);
-  margin-top: clamp(65px, 7vw, 105px);
+  margin-top: clamp(35px, 4vw, 60px);
 }
 
 .project-card {
@@ -382,7 +431,14 @@
 
   .project-grid {
     grid-template-columns: 1fr;
-    margin-top: 50px;
+    margin-top: 35px;
+  }
+
+  .project-sort {
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 24px;
   }
 
   .project-card-media {
@@ -421,7 +477,8 @@
   .project-modal-backdrop,
   .project-modal,
   .project-modal-close,
-  .project-modal-link {
+  .project-modal-link,
+  .project-sort-button {
     animation: none;
     transition: none;
   }
