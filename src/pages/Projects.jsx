@@ -146,7 +146,7 @@ const projects = [
     ],
     tags: ['Unity', 'Figma', 'Research', 'AI'],
     year: '2026',
-    role: 'Research and prototyping contributor',
+    role: 'Research Assistant',
     focus: 'Educational interaction design, AI-assisted experiences, and exploratory prototyping.',
     route: '/',
   },
@@ -198,13 +198,18 @@ const projects = [
     description:
       'An immersive VR experience of life on a farm. Locate, collect, & transport chickens before your family comes to visit.',
     details:
-      'Before You Visit is a playful VR experience that places players on a farm with a time-sensitive chicken-gathering objective. The project blends environment design, interaction scripting, and spatial gameplay.',
+      'Before You Visit is a VR game I independently developed in Unity where players navigate a farm environment to locate 10 hidden chickens before time expires while avoiding a roaming bear that actively pursues them and triggers a game-over state upon contact.\n\nI created the bear asset from scratch in Blender, including 3D modeling, material creation, UV mapping, rigging, and animation setup, then optimized and imported the model into Unity for real-time VR performance.\n\nUsing C# and Unity, I developed the core gameplay systems, including pathfinding and detection logic for the bear, VR locomotion and interaction mechanics, collectible tracking, countdown timers, collision-based win/loss conditions, and scene management to deliver a complete and immersive gameplay experience.',
     image: '/assets/byv-cover.png',
     imageAlt: '',
     galleryImages: [
       {
-        src: '/assets/byv-cover.png',
-        alt: 'Before You Visit VR experience preview',
+        src: 'https://www.youtube.com/embed/ALl4Ogo013Q',
+        alt: 'Before You Visit gameplay video',
+        type: 'youtube',
+      },
+      {
+        src: '/assets/byv-bear.png',
+        alt: 'Before You Visit bear model',
       },
     ],
     tags: ['Unity', 'C#', 'Blender'],
@@ -219,13 +224,18 @@ const projects = [
     description:
       'A proof-of-concept augmented reality application built in Lens Studio for Snap Spectacles. Enables virtual clothing try-on through real-time body region detection and AR garment overlay',
     details:
-      'FitCheck is an AR proof of concept for Snap Spectacles that experiments with virtual clothing try-on. The prototype uses body-region awareness to place garment overlays in real time.',
+      'FitCheck is an AR-powered, proof-of-concept fashion application built my me and 2 other peers in Lens Studio to help users visualize and experiment with outfits in a more interactive and engaging way.\n\nWe utilized Lens Studio’s scripting tools, image tracking, and AR capabilities.\n\nOur motiavations behinf this project was to explore how augmented reality  (AR) could bridge the gap between browsing and trying on clothing, so I focused heavily on creating intuitive interactions and a seamless user experience that felt both useful and fun.\n\nI also made flyers for the showcase we attended, where we demonstarted how out AR application worked.',
     image: '/assets/fitcheck-cover.png',
     imageAlt: '',
     galleryImages: [
       {
-        src: '/assets/fitcheck-cover.png',
-        alt: 'FitCheck AR prototype preview',
+        src: '/assets/fitcheckdemo.MOV',
+        alt: 'FitCheck AR demo video',
+        type: 'video',
+      },
+      {
+        src: '/assets/fitcheckflyer.png',
+        alt: 'FitCheck showcase flyer',
       },
     ],
     tags: ['Python', 'LensStudio', 'AR', 'AI'],
@@ -348,7 +358,14 @@ function ProjectGallery({ project }) {
           </button>
 
           <figure className="project-gallery-item">
-            {activeImage.type === 'video' ? (
+            {activeImage.type === 'youtube' ? (
+              <iframe
+                src={activeImage.src}
+                title={activeImage.alt}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            ) : activeImage.type === 'video' ? (
               <video src={activeImage.src} aria-label={activeImage.alt} controls muted playsInline />
             ) : (
               <img src={activeImage.src} alt={activeImage.alt} />
