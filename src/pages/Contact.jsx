@@ -1,41 +1,59 @@
 import React from 'react';
 import '../styles/contact.css';
-import "../styles/glimpse.css"; 
 
-function Contact () {
-    return (
-        <div>
-            <main>
-                <div>
-                    <h1 className="pages-title">Contact</h1> 
-                </div>
+const contactLinks = [
+  {
+    label: 'LinkedIn',
+    detail: 'Connect with me professionally',
+    href: 'https://www.linkedin.com/in/mandyrlui/',
+    icon: '/assets/linkedin-icon.png',
+    external: true,
+  },
+  {
+    label: 'Email',
+    detail: 'mroselui@gmail.com',
+    href: 'mailto:mroselui@gmail.com',
+    icon: '/assets/mail-icon.png',
+  },
+  {
+    label: 'GitHub',
+    detail: 'View my code and projects',
+    href: 'https://github.com/mandylui',
+    icon: '/assets/github-icon.png',
+    external: true,
+  },
+];
 
-                <div className="contacts-container">
-                    <div className="contacts">
-                        <a href="https://www.linkedin.com/in/mandyrlui/" target="_blank" rel="noopener noreferrer">
-                            <img className="contact-icons" src="/assets/linkedin-icon.png" alt="LinkedIn Icon" /></a>
-                            <a className="contacts-name" href="https://www.linkedin.com/in/mandyrlui/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    </div>
+function Contact() {
+  return (
+    <main className="contact-page">
+      <section className="contact-simple">
+        <p className="contact-eyebrow">Let’s connect</p>
+        <h1 className="pages-title contact-title">Contact</h1>
 
-                    <div className="contacts">
-                        <a href="mailto:mandyrlui@gmail.com">
-                            <img className="contact-icons" src="/assets/mail-icon.png" alt="Email Icon" /></a>
-                        <a className="contacts-name"  href="mailto:mandyrlui@gmail.com">Email</a>
-                    </div>
-
-                    <div className="contacts">
-                    <a href="https://github.com/mandylui" target="_blank" rel="noopener noreferrer">
-                            <img className="contact-icons" src="/assets/github-icon.png" alt="GitHub Icon" /></a>
-                        <a className="contacts-name" href="https://github.com/mandylui" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    </div>
-                </div>
-                
-
-            </main>
-
-            <footer className="contact-footer"></footer>
-        </div>
-    )
+        <section className="contact-card-grid" aria-label="Contact links">
+          {contactLinks.map((contact) => (
+            <a
+              className="contact-card"
+              href={contact.href}
+              key={contact.label}
+              target={contact.external ? '_blank' : undefined}
+              rel={contact.external ? 'noopener noreferrer' : undefined}
+            >
+              <span className="contact-icon-wrap">
+                <img src={contact.icon} alt="" aria-hidden="true" />
+              </span>
+              <span>
+                <span className="contact-card-title">{contact.label}</span>
+                <span className="contact-card-detail">{contact.detail}</span>
+              </span>
+              <span className="contact-card-arrow" aria-hidden="true">↗</span>
+            </a>
+          ))}
+        </section>
+      </section>
+    </main>
+  );
 }
 
 export default Contact;

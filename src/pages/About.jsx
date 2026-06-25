@@ -1,39 +1,33 @@
 // src/pages/About.jsx
 import React from 'react';
-import "../styles/about.css";
+import { Link } from 'react-router-dom';
+import '../styles/about.css';
 
 function About() {
   return (
+    <main className="about-page">
+      <section className="about-simple">
+        <p className="about-eyebrow">A little bit</p>
+        <h1 className="pages-title about-title">About Me</h1>
 
-    <div>
-      <main>
-        <h1 className="pages-title">About Me</h1>
-          
-        <div className="about-heading">
-          <div className="about-name">Mandy Lui</div>
-          <div className="job-title">User-Focused Front-End Developer</div>
-          <div className="about-divider"></div>
-        </div>
-
-        <div className="about-description">
-          Hi! I’m Mandy Lui, a junior at the University of Rochester pursuing a Bachelor's in Computer Science with a concentration in Human-Computer Interaction and a Business minor. I’m passionate about creating user-friendly designs and developing seamless front-end experiences that combine functionality with aesthetics.
-         <br></br><br></br>
-          I’ve worked on projects like Glimpse (a customizable album-making website), and Stay Positive (a mental health platform integrating affirmations, meditation, and journaling), which have allowed me to
-          solve real-world problems through research and thoughtful design & development processes.
-          <br></br><br></br>
-          I've also done a number or various independent projects to help shape the develop I am today!
-          <br></br> This includes apps like Molez--a iOS based Whack-a-Mole game, bry-- a to do/checklist productivity website, and more. Please refer to the "Projects" page to learn more.
-          <br></br><br></br>
-          Outside of coding, I enjoy spending time with family and friends, hiking, playing pickleball, doing crafts/puzzles, and playing the guitar!
-          <br></br><br></br>
-          Feel free to reach out through any of my contacts provided on this website :)
-        </div>
-        
+        <article className="about-description-card">
+          <p>
+            Hi! I'm Mandy, a developer who enjoys turning ideas into intuitive, 
+            interactive experiences. Whether I'm designing interfaces in Figma, building web applications with 
+            React, creating VR games in Unity, or experimenting with AI and AR, 
+            I love finding the balance between thoughtful design and clean, maintainable code.
+          </p>
+          <p>
+            I'm especially drawn to projects where technology can make someone's life a little easier, more engaging, or more accessible. 
+            I enjoy taking products from an initial concept all the way to implementation, 
+            continuously iterating on both the user experience and the technical architecture to create solutions that people genuinely enjoy using.
+          </p>
+          <p>
+            In my spare time I enjoy going on walks & runs, trying the newest milk tea store (I love Molly Tea), and doing arts & crafts!
+          </p>
+        </article>
+      </section>
     </main>
-
-    <footer className="footer"></footer>
-    </div>
-    
   );
 }
 
