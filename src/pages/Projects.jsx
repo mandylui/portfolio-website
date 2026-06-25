@@ -8,7 +8,7 @@ const projects = [
     description:
       'A one-stop-shop album-making web app made for capturing and customising memories with ease.',
     details:
-      'Glimpse brings the charm of handmade photo albums into a flexible digital workspace. I designed and developed tools for creating albums, editing canvases, adding images and decorative assets, and preserving user changes between pages.',
+      'Glimpse is a web-based photo album editor I created to make designing personalized albums more intuitive and flexible, which addresses many of the usability challenges I noticed in existing online photo editing tools.\n\nI led the project from initial concept through implementation by conducting user research, mapping customer journeys, designing the interface in Figma, and developing the application using React, CSS, JavaScript, and Flask.\n\nSome of Glimpse\'s features includes an interactive canvas that allows users to arrange, customize, and save album layouts with reusable UI components and customizable templates, the ability to create and save multiple photo albums, and logins to save your progress.\n\nThe project is still actively evolving, and I\'m currently redesigning and rebuilding it with a stronger focus on modern UI/UX, improved architecture, enhanced performance, and a more scalable codebase to create an even more polished user experience.',
     image: '/assets/glimpse-home.png',
     imageAlt: 'Glimpse album dashboard',
     galleryImages: [
@@ -45,7 +45,7 @@ const projects = [
     description:
       'A cross-platform wellness experience for affirmations, meditation, and journaling.',
     details:
-      'Stay Positive is a mental-health platform created by a nine-person development team. I helped shape the website and iOS experience, including the support workflow, responsive interface, and registration and welcome screens.',
+      'https://staypositiveapp.com/\n\nStay Positive is a mental health platform I developed with a five-person team to create a supportive space where users could build healthy habits through features like affirmations, meditation, and journaling.\n\nI collaborated on the UX design process by creating wireframes, prototypes, and user flows in Figma, then translated those designs into code by developing the responsive homepage, Terms of Service, and Contact webpage using TypeScript, while also contributing to the iOS app in Swift.',
     image: '/assets/staypositive-cover.png',
     imageAlt: 'Stay Positive website designs',
     galleryImages: [
@@ -62,8 +62,8 @@ const projects = [
         alt: 'Stay Positive iOS Figma designs',
       },
       {
-        src: '/assets/sp-help-page.png',
-        alt: 'Stay Positive help page',
+        src: '/assets/sp-contactpg.png',
+        alt: 'Stay Positive contact page',
       },
     ],
     tags: ['Web + iOS', 'TypeScript', 'Swift'],
@@ -156,13 +156,18 @@ const projects = [
     description:
       'Assisted in the conversion of a web application that utilizes AI for sign language instruction.',
     details:
-      'rhymASL is an accessibility-centered learning project using AI to support sign language instruction. I assisted with translating the existing application experience into a clearer, more usable interface.',
+      'rhymASL is an educational web application I helped modernize by converting the existing Python-based frontend to React to make the platform more maintainable, responsive, and easier to expand with new features.\n\nrhymASL aims to helps deaf children learn American Sign Language by using AI to translate user prompts into ASL glosses and pairing them with instructional sign language videos, so I focused on building reusable React components, integrating the FastAPI backend, and implementing dynamic video playback and API-driven interactions.',
     image: '/assets/rhymASL_UI.png',
     imageAlt: '',
     galleryImages: [
       {
         src: '/assets/rhymASL_UI.png',
         alt: 'rhymASL interface preview',
+      },
+      {
+        src: '/assets/rhymasldemo.mp4',
+        alt: 'rhymASL demo video',
+        type: 'video',
       },
     ],
     tags: ['Unity', 'Figma', 'Research', 'AI'],
@@ -177,18 +182,38 @@ const projects = [
     description:
       'Designed & created client websites and modals through GoHighLevel, audited & debugged workflows.',
     details:
-      'At GYB, I designed and implemented client-facing web pages and modals using GoHighLevel while also auditing automations, debugging workflows, and refining conversion-focused layouts.',
+      'https://mrgyb.com/\n\nGrow Your Business (GYB) was a fast-paced web development internship where I built and maintained client-facing websites, calculators, chatbots, and workflow automations for a variety of businesses using GoHighLevel, JavaScript, HTML/CSS, and API integrations.\n\nI designed and developed (pictured in the gallery) responsive landing pages and funnels, coded interactive tools such as ROI, pricing, and quote calculators, built AI-powered chatbot experiences, and debugged complex CRM, calendar, payment, email, and workflow automations while balancing multiple client deadlines and rapidly changing requirements.\n\nBeyond development, I regularly audited existing systems to improve reliability and user experience, collaborated closely with designers and project managers, and learned how to communicate technical limitations, prioritize tasks, and deliver polished solutions under tight deadlines-- an experience that solidified my passion for frontend development and building products that create real business value.',
     image: '/assets/gyb-cover.png',
     imageAlt: '',
     galleryImages: [
       {
-        src: '/assets/gyb-cover.png',
-        alt: 'GYB web and app design preview',
+        src: '/assets/gyb1.png',
+        alt: 'GYB project screenshot 1',
+      },
+      {
+        src: '/assets/gyb2.png',
+        alt: 'GYB project screenshot 2',
+      },
+      {
+        src: '/assets/gyb3.png',
+        alt: 'GYB project screenshot 3',
+      },
+      {
+        src: '/assets/gyb4.png',
+        alt: 'GYB project screenshot 4',
+      },
+      {
+        src: '/assets/gyb5.png',
+        alt: 'GYB project screenshot 5',
+      },
+      {
+        src: '/assets/gyb6.png',
+        alt: 'GYB project screenshot 6',
       },
     ],
     tags: ['GoHighLevel', 'HTML', 'CSS', 'Business'],
     year: '2025',
-    role: 'Web and app design intern',
+    role: 'Web/App Design Intern',
     focus: 'Client websites, modal design, workflow auditing, debugging, and business-facing UX.',
     route: '/',
   },
@@ -250,13 +275,26 @@ const projects = [
     description:
       'A hands-free cooking expereince and interactive recipe guide that allows for a seamless & engaging cooking experience. ',
     details:
-      'Par Vous Même imagines a more fluid cooking experience through hands-free recipe guidance. The concept focuses on reducing friction while users cook, follow steps, and stay engaged in the process.',
+      'Par Vous Même is a proof-of-concept interactive cooking assistant a team of 3 and I developed to make following recipes more hands-free and intuitive through voice-guided navigation and real-time ingredient recommendations.\n\nAs the project lead, I coordinated development tasks, managed project timelines, and collaborated closely with my teammates while also contributing to the application\'s development using HTML, CSS, Flask, and Python to integrate the frontend with backend functionality.\n\nI really enjoyed balancing both the technical and leadership sides of the project, continuously refining the user experience and application flow to create a platform that felt natural, accessible, and genuinely helpful in the kitchen.',
     image: '/assets/pvm-cover.png',
     imageAlt: '',
     galleryImages: [
       {
-        src: '/assets/pvm-cover.png',
-        alt: 'Par Vous Même project preview',
+        src: '/assets/pvmdemo.mp4',
+        alt: 'Par Vous Même demo video',
+        type: 'video',
+      },
+      {
+        src: '/assets/pvmusecase2.png',
+        alt: 'Par Vous Même use case 1',
+      },
+      {
+        src: '/assets/pvmusecase1.png',
+        alt: 'Par Vous Même use case 2',
+      },
+      {
+        src: '/assets/pvmusecase3.png',
+        alt: 'Par Vous Même use case 3',
       },
     ],
     tags: ['Python', 'LensStudio', 'AR', 'AI'],
@@ -271,7 +309,7 @@ const projects = [
     description:
       'A modern take of the classic Whack-a-Mole game.',
     details:
-      'Molez is a modern mobile game concept inspired by Whack-a-Mole. The project focused on creating a simple, playful interaction loop with clean visuals and approachable gameplay.',
+      'Molez was a game my team of four and I developed as a modern spin on the classic Whack-a-Mole, adding new gameplay mechanics such as timed rounds, power-ups, and hand-drawn pixel art to create a more engaging experience. I contributed throughout the development process by collaborating on game design, implementing gameplay functionality, and iterating on mechanics to make the game feel responsive, balanced, and enjoyable.',
     image: '/assets/molez-cover.png',
     imageAlt: '',
     galleryImages: [
