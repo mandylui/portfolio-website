@@ -32,7 +32,7 @@
 .projects-rule {
   width: 100%;
   height: 1px;
-  margin-top: 62px;
+  margin-top: clamp(30px, 3vw, 44px);
   background: #d4cbc1;
 }
 
@@ -41,7 +41,7 @@
   align-items: center;
   justify-content: flex-end;
   gap: 15px;
-  margin-top: 30px;
+  margin-top: 16px;
 }
 
 .project-sort-label {
@@ -87,9 +87,9 @@
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(22px, 2.4vw, 48px);
-  margin-top: clamp(35px, 4vw, 60px);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(18px, 2vw, 32px);
+  margin-top: clamp(24px, 2.4vw, 36px);
 }
 
 .project-card {
@@ -118,7 +118,8 @@
 .project-card-media {
   position: relative;
   display: grid;
-  height: clamp(250px, 29vw, 460px);
+  aspect-ratio: 4 / 3;
+  height: auto;
   overflow: hidden;
   background: #eadbd8;
   place-items: center;
@@ -158,10 +159,10 @@
 
 .project-card-content {
   display: flex;
-  min-height: 260px;
+  min-height: 220px;
   box-sizing: border-box;
   flex-direction: column;
-  padding: 32px 34px 28px;
+  padding: 24px 25px 22px;
 }
 
 .project-card-heading {
@@ -181,6 +182,10 @@
   letter-spacing: -0.035em;
 }
 
+.project-card h2 {
+  font-size: clamp(1.65rem, 2vw, 2.35rem);
+}
+
 .project-arrow {
   color: #9b8b7f;
   font-size: 1.7rem;
@@ -192,10 +197,10 @@
 }
 
 .project-card-content > p {
-  margin: 22px 0 30px;
+  margin: 16px 0 22px;
   color: #877b72;
-  font-size: clamp(0.95rem, 1.1vw, 1.15rem);
-  line-height: 1.65;
+  font-size: clamp(0.9rem, 0.95vw, 1rem);
+  line-height: 1.55;
 }
 
 .project-card-meta {
@@ -554,13 +559,19 @@
   }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1250px) {
+  .project-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
   .project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .project-card-media {
-    height: 360px;
+    aspect-ratio: 4 / 3;
   }
 
   .project-modal-top,
@@ -587,23 +598,24 @@
   }
 
   .projects-rule {
-    margin-top: 38px;
+    margin-top: 26px;
   }
 
   .project-grid {
     grid-template-columns: 1fr;
-    margin-top: 35px;
-  }
-
-  .project-sort {
-    align-items: flex-end;
-    flex-direction: column;
-    gap: 10px;
     margin-top: 24px;
   }
 
+  .project-sort {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 14px;
+    margin-top: 14px;
+  }
+
   .project-card-media {
-    height: 330px;
+    aspect-ratio: 4 / 3;
   }
 
   .project-card-content {

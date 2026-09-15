@@ -324,6 +324,45 @@ const projects = [
     focus: 'Swift development, game interaction patterns, and lightweight visual design.',
     route: '/',
   },
+  {
+    number: '11',
+    title: 'SD Zoo App',
+    description:
+      'A gamified educational mobile experience designed to help children engage more deeply with animals, habitats, and conservation at the San Diego Zoo.',
+    details:
+      'The San Diego Zoo has always been one of my favorite places to visit, and my love for animals made me especially aware of how younger visitors often move quickly from exhibit to exhibit without fully engaging with the animals, their habitats, or conservation efforts. To address this problem, I independently designed a gamified educational mobile experience for the San Diego Zoo.\n\nI created the scavenger hunt concept as a way to make learning more interactive and memorable for kids while they explore the zoo. I developed the experience from scratch-- first by defining the product concept and user journey, then creating user flows and wireframes, then crafted a high-fidelity prototype in Figma. I focused on combining educational content with playful challenges and gamification to encourage children to observe animals more closely, learn about their behaviors and environments, and build greater awareness of wildlife conservation.',
+    image: '/assets/sdzoooverviewfigma.png',
+    imageAlt: 'SD Zoo App Figma overview',
+    galleryImages: [
+      {
+        src: 'https://drive.google.com/file/d/1O8yjGv1FUJrKvajUrbvMn69M0gYV8nYH/preview',
+        alt: 'SD Zoo App project overview',
+        type: 'iframe',
+      },
+      {
+        src: '/assets/sdzoooverviewfigma.png',
+        alt: 'SD Zoo App Figma overview',
+      },
+      {
+        src: '/assets/sdzoolofi.png',
+        alt: 'SD Zoo App low-fidelity wireframes',
+      },
+      {
+        src: '/assets/sdzoohifi1.png',
+        alt: 'SD Zoo App high-fidelity design 1',
+      },
+      {
+        src: '/assets/sdzoohifi2.png',
+        alt: 'SD Zoo App high-fidelity design 2',
+      },
+    ],
+    tags: ['Figma', 'UI/UX Design', 'User Research', 'A/B Prototyping'],
+    year: '2026',
+    date: 'Jan 2026 - May 2026',
+    role: 'UX Designer',
+    focus: 'UX research, mobile UI design, gamification, and high-fidelity prototyping.',
+    route: '/',
+  },
   
 ];
 
@@ -396,7 +435,7 @@ function ProjectGallery({ project }) {
           </button>
 
           <figure className="project-gallery-item">
-            {activeImage.type === 'youtube' ? (
+            {activeImage.type === 'youtube' || activeImage.type === 'iframe' ? (
               <iframe
                 src={activeImage.src}
                 title={activeImage.alt}
@@ -555,7 +594,7 @@ function Projects() {
               <div className="project-modal-top">
                 <div className="project-modal-intro">
                   <p className="project-modal-eyebrow">
-                    {activeProject.number} · {activeProject.year}
+                    {activeProject.number} · {activeProject.date || activeProject.year}
                   </p>
                   <h2 id="project-modal-title">{activeProject.title}</h2>
                 </div>
