@@ -29,12 +29,12 @@ function App() {
               </h1>
 
               <p className="home-intro">
-                I enjoy turning everyday ideas into thoughtful, playful web experiences.
+                I design and build interfaces that make everyday things a little easier (and fun)!
               </p>
 
               <div className="home-actions">
                 <Link className="projects-button" to="/projects">
-                  View Projects
+                  View Projects <span className="home-button-arrow" aria-hidden="true">&rarr;</span>
                 </Link>
                 <Link className="about-link" to="/about">
                   About Me

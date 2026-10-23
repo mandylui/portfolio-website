@@ -10,6 +10,20 @@
   font-family: 'DM Sans', sans-serif;
 }
 
+.home-page::before,
+.home-page::after {
+  position: absolute;
+  top: 104px;
+  bottom: 28px;
+  width: 1px;
+  background: rgba(98, 68, 53, .14);
+  content: '';
+  pointer-events: none;
+}
+
+.home-page::before { left: clamp(28px, 2.8vw, 40px); }
+.home-page::after { right: clamp(28px, 2.8vw, 40px); }
+
 .home-main-container {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
@@ -30,7 +44,7 @@
   text-transform: uppercase;
 }
 
-.home-eyebrow span { padding: 0 .25em; }
+.home-eyebrow span { padding: 0 .25em; color: #687d63; }
 
 .title {
   display: flex;
@@ -44,7 +58,7 @@
   line-height: .88;
 }
 
-.title em { font-weight: 300; }
+.title em { margin-top: -.025em; font-weight: 300; }
 
 .home-intro {
   max-width: 330px;
@@ -61,19 +75,22 @@
   text-decoration: none;
   transition: color 180ms ease, background-color 180ms ease;
 }
-.projects-button { padding: 14px 28px; border-radius: 999px; background: var(--home-ink); color: #fffaf5; }
+.projects-button { display: inline-flex; align-items: center; gap: 12px; padding: 14px 28px; border-radius: 999px; background: var(--home-ink); color: #fffaf5; }
+.home-button-arrow { display: inline-block; transition: transform 180ms ease; }
+.projects-button:hover .home-button-arrow,
+.projects-button:focus-visible .home-button-arrow { transform: translateX(3px); }
 .projects-button:hover { background: #493226; }
 .about-link { padding: 6px 0; border-bottom: 1px solid #b9aca2; color: var(--home-ink); }
-.about-link:hover:hover { color: #8a5445; border-bottom-color: currentColor; }
+.about-link:hover, .about-link:focus-visible { color: #687d63; border-bottom-color: currentColor; }
 .home-page a:focus-visible { outline: 2px solid #624435; outline-offset: 6px; }
 
-.botanical-art { position: relative; isolation: isolate; margin: 0; width: 100%; }
+.botanical-art { position: relative; isolation: isolate; margin: 0; width: 106%; justify-self: center; }
 .botanical-blob--blush {
   position: absolute;
   z-index: -1;
   top: 9%;
-  right: -7%;
-  width: 91%;
+  right: -3%;
+  width: 87%;
   aspect-ratio: 1;
   border-radius: 50%;
   background: #efd4cf;
@@ -105,14 +122,18 @@
 
 
 @media (max-width: 760px) {
+  .home-page::before, .home-page::after { display: none; }
   .home-page { margin-top: -52px; padding-bottom: 64px; }
   .home-main-container { grid-template-columns: 1fr; gap: 38px; min-height: auto; padding: 20px 0 52px; }
   .title { font-size: clamp(6rem, 22vw, 9rem); margin-top: 24px; }
   .home-intro { max-width: 360px; }
-  .botanical-art { width: min(82%, 360px); justify-self: center; }
+  .botanical-art { width: min(88%, 382px); justify-self: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .home-page a { transition: none; }
+  .home-button-arrow { transition: none; }
+  .projects-button:hover .home-button-arrow,
+  .projects-button:focus-visible .home-button-arrow { transform: none; }
   .home-profile-img, .botanical-blob--blush { animation: none; }
 }
