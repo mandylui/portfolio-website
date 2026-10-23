@@ -3,6 +3,32 @@ import '../styles/projects.css';
 
 const projects = [
   {
+    title: 'Handshake AI',
+    description: 'Projects: Project Lighthouse, Project Hedgehog, Project Lizard (v3)',
+    detailSections: [
+      {
+        title: 'Project Lighthouse',
+        subtitle: 'AI Evaluation: Financial Reasoning & Benchmark Design',
+        text: "Designed complex, real-world financial reasoning tasks to evaluate AI agents' ability to analyze personal financial data and provide accurate, actionable insights. Developed multi-step evaluation scenarios using bank statements, transaction histories, and consumer financial profiles, incorporating challenges such as recurring payment identification, subscription discrepancies, and cash-flow calculations. Authored reference solutions, failure analyses, and weighted evaluation rubrics with 20–35 criteria to systematically assess model accuracy, reasoning, and instruction adherence. Analyzed multiple AI model responses to identify reasoning failures, calculation errors, and gaps in financial decision-making.",
+      },
+      {
+        title: 'Project Hedgehog',
+        subtitle: 'Multimodal AI Evaluation: Visual Reasoning & Dataset Annotation',
+        text: "Developed challenging visual question-and-answer pairs to evaluate and improve AI models' image understanding and reasoning capabilities. Analyzed image datasets to construct unambiguous questions requiring visual interpretation, contextual reasoning, and attention to fine-grained details rather than simple object recognition. Tested generated questions against AI models, identified incorrect responses, and provided verified ground-truth answers to support model improvement. Managed annotation and evaluation workflows across SuperAnnotate and Handshake AI, maintaining dataset quality through precise labeling, answer validation, and adherence to annotation standards.",
+      },
+      {
+        title: 'Project Lizard',
+        subtitle: 'Multimodal AI Training: Visual Reasoning & Model Evaluation',
+        text: "Contributed to multimodal AI training by creating image-grounded question-and-answer pairs designed to strengthen models' visual reasoning abilities. Examined visual content to develop challenging prompts involving spatial relationships, object attributes, contextual clues, and multi-step visual inference. Evaluated model-generated answers against image evidence, identifying interpretation errors and documenting accurate responses for training and assessment. Produced structured, quality-focused annotations to support the development of more reliable vision-language models.",
+      },
+    ],
+    image: '/assets/handshakeai-logo.png',
+    imageAlt: 'Handshake AI logo',
+    tags: ['AI', 'Prompt Engineering'],
+    year: '2026',
+    role: 'Handshake AI Engineer',
+  },
+  {
     number: '01',
     title: 'Glimpse',
     description:
@@ -606,7 +632,15 @@ function Projects() {
                 <div className="project-modal-sections">
                   <section className="project-detail-section project-detail-section--overview">
                     <h3>Overview</h3>
-                    <ProjectParagraphs text={activeProject.details || activeProject.description} />
+                    {activeProject.detailSections ? activeProject.detailSections.map((section) => (
+                      <section className="project-overview-section" key={section.title}>
+                        <h4>{section.title}</h4>
+                        <p>{section.subtitle}</p>
+                        <ProjectParagraphs text={section.text} />
+                      </section>
+                    )) : (
+                      <ProjectParagraphs text={activeProject.details || activeProject.description} />
+                    )}
                   </section>
 
                   <section className="project-detail-section">

@@ -16,16 +16,21 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={
-          <main className="home-main-container">
+          <main className="home-page">
+          <section className="home-main-container" aria-labelledby="home-title">
             <div className="home-sub-container">
               <p className="home-eyebrow">
                 Front-End Developer <span aria-hidden="true">·</span> San Diego
               </p>
 
-              <h1 className="title">
+              <h1 className="title" id="home-title">
                 <span>Mandy</span>
                 <em>Lui.</em>
               </h1>
+
+              <p className="home-intro">
+                I enjoy turning everyday ideas into thoughtful, playful web experiences.
+              </p>
 
               <div className="home-actions">
                 <Link className="projects-button" to="/projects">
@@ -37,18 +42,17 @@ function App() {
               </div>
             </div>
 
-            <div className="botanical-art">
+            <figure className="botanical-art">
               <span className="botanical-blob botanical-blob--blush" aria-hidden="true" />
-              <span className="botanical-blob botanical-blob--sage" aria-hidden="true" />
-              <span className="botanical-dot botanical-dot--one" aria-hidden="true" />
-              <span className="botanical-dot botanical-dot--two" aria-hidden="true" />
 
               <img
                 className="home-profile-img"
                 src="/assets/profile-img.png"
-                alt="Mandy Lui"
+                alt="Mandy smiling by the ocean at sunset"
               />
-            </div>
+            </figure>
+          </section>
+
           </main>
         } />
         <Route path="/projects" element={<Projects />} />

@@ -9,11 +9,10 @@ html, body {
 }
 
 header {
-    background-color: #F3E1E1;
-    height: 50px;
+    background-color: #f7f2ec;
+    height: 80px;
     flex-shrink: 0;
-    border-bottom: 8px solid rgba(235, 199, 196, 0.20);
-    margin-bottom: 100px;
+    margin-bottom: 78px;
 }
 
 .header-names {
@@ -57,4 +56,33 @@ header {
 .names:hover::after,
 .names:focus-visible::after {
     transform: scaleX(1);
+}
+
+.header-names {
+    box-sizing: border-box;
+    align-items: center;
+    gap: clamp(18px, 3vw, 40px);
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 clamp(24px, 7vw, 104px);
+}
+.header-mark {
+    margin-right: auto;
+    color: #624435;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 24px;
+    text-decoration: none;
+}
+.names { padding: 5px 0; font-size: 14px; }
+.names::after { right: 0; left: 0; bottom: 0; }
+.names.active::after { transform: scaleX(1); }
+.header-names a:focus-visible { outline: 2px solid #624435; outline-offset: 4px; }
+@media (max-width: 420px) {
+    .header-names { gap: 15px; padding: 0 20px; }
+    .names { font-size: 12px; }
+    .header-mark { font-size: 21px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .names, .names::after { transition: none; }
 }
