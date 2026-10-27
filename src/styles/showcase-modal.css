@@ -46,6 +46,7 @@
 .showcase-dialog-bar > span > span { padding: 0 12px; color: #a08b7c; }
 .showcase-dialog-bar button { display: flex; align-items: center; gap: 16px; min-height: 44px; padding: 8px 16px; border: 1px solid #d9cdc0; border-radius: 999px; background: #fcf9f5; color: inherit; font: inherit; cursor: pointer; }
 .showcase-dialog-bar button:hover { background: #eadbd8; }
+.showcase-dialog-bar button { justify-content: center; width: 44px; height: 44px; padding: 0; }
 .showcase-dialog-bar button span { font-size: 23px; line-height: 1; }
 .showcase-dialog-body { padding: clamp(20px, 2vw, 28px) clamp(24px, 4vw, 64px) clamp(24px, 4vw, 64px); }
 .showcase-dialog-heading { height: auto; margin: 0 0 36px; background: transparent; }

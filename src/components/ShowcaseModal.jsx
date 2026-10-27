@@ -33,7 +33,7 @@ export default function ShowcaseModal({ project, onClose }) {
     >
       <div className="showcase-dialog-bar">
         <span>Selected work <span aria-hidden="true">/</span> {project.year}</span>
-        <button type="button" onClick={onClose} aria-label="Close project details" autoFocus>Close <span aria-hidden="true">&times;</span></button>
+        <button type="button" onClick={onClose} aria-label="Close project details" autoFocus><span aria-hidden="true">&times;</span></button>
       </div>
       <div className="showcase-dialog-body">
         <header className="showcase-dialog-heading">

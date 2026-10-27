@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import projects from './data/projects';
 import ShowcaseModal from './components/ShowcaseModal';
 import Header from './components/Header';
+import ScrollToTop from './components/ScrollToTop';
 import { BrowserRouter as Router, Link, Routes, Route } from 'react-router-dom';
 import Projects from './pages/Projects';
 import About from './pages/About';
@@ -115,6 +116,7 @@ function Home() {
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
