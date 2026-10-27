@@ -28,10 +28,6 @@ function App() {
                 <em>Lui.</em>
               </h1>
 
-              <p className="home-intro">
-                I design and build interfaces that make everyday things a little easier (and fun)!
-              </p>
-
               <div className="home-actions">
                 <Link className="projects-button" to="/projects">
                   View Projects <span className="home-button-arrow" aria-hidden="true">&rarr;</span>
