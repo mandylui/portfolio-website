@@ -333,9 +333,9 @@ const projects = [
     number: '10',
     title: 'Molez',
     description:
-      'A modern take of the classic Whack-a-Mole game.',
+      'A modern take on the classic game: Whack-a-Mole.',
     details:
-      'Molez was a game my team of four and I developed as a modern spin on the classic Whack-a-Mole, adding new gameplay mechanics such as timed rounds, power-ups, and hand-drawn pixel art to create a more engaging experience. I contributed throughout the development process by collaborating on game design, implementing gameplay functionality, and iterating on mechanics to make the game feel responsive, balanced, and enjoyable.',
+      '(https://github.com/jxiang0608/Molez) Molez is a game a team of four and I developed in our Mobile App Development course as a modern spin on the classic Whack-a-Mole. Instead of simply remaking the classic game, we added new gameplay mechanics such as timed rounds, power-ups, and hand-drawn pixel art to create a more engaging experience. I contributed throughout the development process by collaborating on game design, implementing gameplay functionality, and iterating on mechanics to make the game feel responsive, balanced, and enjoyable.',
     image: '/assets/molez-cover.png',
     imageAlt: '',
     galleryImages: [
